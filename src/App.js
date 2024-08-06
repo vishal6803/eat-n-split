@@ -57,7 +57,11 @@ export default function App() {
         </Button>
       </div>
       {selectUser && (
-        <SplitBillForm onSplitBill={handleSplitBill} selectUser={selectUser} />
+        <SplitBillForm
+          key={selectUser.id}
+          onSplitBill={handleSplitBill}
+          selectUser={selectUser}
+        />
       )}
     </div>
   );
